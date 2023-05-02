@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Aloha_.Registr"
+             Title="Поддержка">
+    <ContentPage.Resources>
+        <StyleSheet Source="/style/style.css" />
+    </ContentPage.Resources>
+    <StackLayout>
+        
+        <Frame x:Name="frameElem" CornerRadius="20" HeightRequest="640" BorderColor="#C8C8C8" HasShadow="True">
+            <Grid ColumnDefinitions=" *, Auto, *" RowDefinitions="50, 32, 50, 40, 40, 40, 40, 40, 50, 30, 60, 60, 40 " >
+
+                <Frame Grid.Column="1" Padding="0" BorderColor="white" Grid.Row="0">
+                    <Label Text="РЕГИСТРАЦИЯ" TextColor="Black" FontSize="32" HorizontalOptions="Center"></Label>
+                </Frame>
+                <Frame Grid.Column="1" Padding="1" BorderColor="white" Grid.Row="1" >
+                    <Label Text="Пожалуйста, заполните форму" HorizontalOptions="Center" TextColor="Black" FontAttributes="Bold" FontSize="18"></Label>
+                </Frame>
+                <Frame Grid.Column="1" Padding="1" BorderColor="white" Grid.Row="2">
+                    <Label Text="Email" TextColor="Black" FontAttributes="Bold" HorizontalOptions="Center" FontSize="16" VerticalOptions="End"></Label>
+                </Frame>
+                <Frame Grid.Column="1" Grid.Row="3" Padding="0" BorderColor="grey" CornerRadius="0">
+                    <Entry Placeholder = "Введите Email"  FontSize="18" MaxLength ="20" />
+                </Frame>
+                <Frame Grid.Column="1" Padding="1" BorderColor="white" Grid.Row="4" >
+                    <Label Text="Пароль" TextColor="Black" FontAttributes="Bold" HorizontalOptions="Center" FontSize="16" VerticalOptions="End"></Label>
+                </Frame>
+                <Frame Grid.Column="1" Grid.Row="5" Padding="0"  BorderColor="grey" CornerRadius="0">
+                    <Entry Placeholder = "Введите пароль"  FontSize="18" MaxLength ="20" />
+                </Frame>
+                <Frame Grid.Column="1" Padding="1" BorderColor="white" Grid.Row="6" >
+                    <Label Text="Повторите Пароль" TextColor="Black" FontAttributes="Bold" HorizontalOptions="Center" FontSize="16" VerticalOptions="End"></Label>
+                </Frame>
+                <Frame Grid.Column="1" Grid.Row="7" Padding="0"  BorderColor="grey" CornerRadius="0">
+                    <Entry Placeholder = "Повторите пароль"  FontSize="18" MaxLength ="20" />
+                </Frame>
+                <Frame Grid.Column="1" Padding="1" BorderColor="white" Grid.Row="8" >
+                    <Label Text="Создавая учетную запись, вы соглашаетесь" TextColor="Black" FontAttributes="Bold" HorizontalOptions="Center" FontSize="16" VerticalOptions="End"></Label>
+                </Frame>
+                <Frame Grid.Column="1" Padding="1" BorderColor="white" Grid.Row="9" >
+                    <Label Text="Условия и конфидитиальность" TextColor="Blue" FontAttributes="Bold" HorizontalOptions="Center"  FontSize="16" TextDecorations="Underline"></Label>
+                </Frame>
+                <Frame Grid.Column="1" Grid.Row="10" Padding="0" class="frameButton" CornerRadius="0">
+                    <Button Text="Зарегистрироваться" CornerRadius="0" class="buttonRegistr"></Button>
+                </Frame>
+                <Frame Grid.Column="1" Grid.Row="11" Padding="0"  BorderColor="White">
+                    <Label Text="Уже есть аккаунт?" TextColor="Black" HorizontalOptions="Center" FontAttributes="Bold" Margin="20" FontSize="16" class="textBold" VerticalOptions="Center"></Label>
+                </Frame>
+                <Frame Grid.Column="1" Grid.Row="12" Padding="0" CornerRadius="0" BorderColor="White" >
+                    <Button Text="Войти" class="buttonRegistr" CornerRadius="0" Clicked="ToSignInPage"></Button>
+                </Frame>
+
+            </Grid>
+        </Frame>
+        <Frame BorderColor="#C8C8C8" HasShadow="True" HeightRequest="60" VerticalOptions="End" CornerRadius="20" Padding="0" Margin="0,110">
+            <StackLayout Orientation="Horizontal" Padding="0" HorizontalOptions="Center">
+                <ImageButton Source="google.svg" WidthRequest="30" HeightRequest="40"/>
+                <Button Text="Вход через аккаунт Google" TextColor="Black" FontSize="18" VerticalOptions="Center" Padding="0" HeightRequest="50" WidthRequest="300"/>
+            </StackLayout>
+        </Frame>
+    </StackLayout>
+</ContentPage>

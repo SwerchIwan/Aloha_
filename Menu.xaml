@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Aloha_.Menu"
+             Title="Меню">
+
+    <VerticalStackLayout BackgroundColor="White">
+        <Frame CornerRadius="0" BorderColor="White">
+            <Grid ColumnDefinitions="100, 200" RowDefinitions="100"  HorizontalOptions="Start">
+                <Frame Grid.Column="0" CornerRadius="100" BorderColor="White" >
+                    <Frame.Background>
+
+                        <LinearGradientBrush EndPoint="0,1">
+                            <GradientStop Color="#28C2D1"
+                          Offset="1" />
+                            <GradientStop Color="#A500FF"
+                          Offset="1" />
+                        </LinearGradientBrush>
+                    </Frame.Background>
+                    <Frame CornerRadius="100" WidthRequest="90" HeightRequest="90" BorderColor="White">
+                        <Image  Scale="1" Source="google.svg" />
+                    </Frame>
+                </Frame >
+                <Frame Grid.Column="1" BorderColor="White" >
+                    <StackLayout>
+                        <Label Text="Петр Семенович" TextColor="Black" FontSize="21" VerticalOptions="Center"></Label>
+                        <Label Text="petrsemenovich" TextColor="Black" FontSize="13" VerticalOptions="Center"></Label>
+                    </StackLayout>
+                </Frame>
+                
+            </Grid>
+            
+        </Frame>
+        <Grid ColumnDefinitions="*, 350, *" Margin="30" BackgroundColor="Aqua" HeightRequest="400">
+            <Frame Padding="0,0" WidthRequest="300" HeightRequest="240" BackgroundColor="White" Grid.Column="1" HasShadow="True">
+                <StackLayout Padding="0" Margin="0" WidthRequest="350" >
+                    <Frame CornerRadius="0" Margin="0" HeightRequest="80">
+                        <Button WidthRequest="350" HeightRequest="80" CornerRadius="0" Text="Выйти из аккаунта                                          >" Clicked="ToRegistrPage" TextColor="White" BackgroundColor="#72ACF1"></Button>
+                    </Frame>
+                    <Frame Grid.Row="1" CornerRadius="0"  HeightRequest="80">
+                        <Button WidthRequest="350" HeightRequest="80" CornerRadius="0" Text="Официальный сайт                                        >" Clicked="ToRegistrPage" TextColor="White" BackgroundColor="#72ACF1"></Button>
+                    </Frame>
+                    <Frame Grid.Row="2" CornerRadius="0"  HeightRequest="80">
+                        <Button WidthRequest="350" HeightRequest="80" CornerRadius="0" Text="История заказов                                             >" Clicked="ToRegistrPage" TextColor="White" BackgroundColor="#72ACF1"></Button>
+                    </Frame>
+                    <Frame Grid.Row="3" CornerRadius="0"  HeightRequest="80">
+                        <Button WidthRequest="350" HeightRequest="80" CornerRadius="0" Text="Ваша активность                                             >" Clicked="ToRegistrPage" TextColor="White" BackgroundColor="#72ACF1"></Button>
+                    </Frame>
+                    <Frame Grid.Row="3" CornerRadius="0"  HeightRequest="80">
+                        <Button WidthRequest="350" HeightRequest="80" CornerRadius="0" Text="Условия и конфидитиальность                  >" Clicked="ToRegistrPage" TextColor="White" BackgroundColor="#72ACF1"></Button>
+                    </Frame>
+                </StackLayout>
+            </Frame>
+        </Grid>
+    </VerticalStackLayout>
+    
+
+</ContentPage>

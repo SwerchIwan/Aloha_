@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="Aloha_.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:Aloha_"
+    Shell.FlyoutBehavior="Disabled">
+    
+        
+    
+    <TabBar x:Name="menu">
+        
+           
+        
+        <Tab Icon="find.png" Title="Туры">
+            <ShellContent Title="Туры" ContentTemplate="{DataTemplate local:MainPage}"/>
+            
+
+        </Tab>
+        <Tab  Icon="support.png" Title="Поддержка">
+            <ShellContent Title="Поддержка" ContentTemplate="{DataTemplate local:SupportPage}"/>
+        </Tab>
+        <Tab  Icon="menu1.png" Title="Меню">
+            <ShellContent Title="Туры" ContentTemplate="{DataTemplate local:Menu}"/>
+        </Tab>
+    </TabBar>
+
+</Shell>

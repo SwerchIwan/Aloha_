@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Aloha_.MainPage"
+             xmlns:local="clr-namespace:Aloha_">
+
+    <ContentPage.Resources>
+        <StyleSheet Source="/style/style.css" />
+    </ContentPage.Resources>
+
+    
+
+    <Frame CornerRadius="0" BorderColor="White">
+        <ScrollView>
+            <VerticalStackLayout
+                                Spacing="25"
+                                Padding="1,0">
+                <HorizontalStackLayout BackgroundColor="#72ACF1">
+                    <SearchBar Placeholder="Введите запрос для поиска" SearchButtonPressed="OnSearchButtonPressed" />
+                    <ListView x:Name="searchResultsListView" />
+                </HorizontalStackLayout>
+
+                <CollectionView>
+                    <CollectionView.ItemsSource>
+                        <x:Array Type="{x:Type local:Person}">
+                            <local:Person Name="Турция" Img="turzia.jpeg" Description="Это прекрасное место, где вы можете провести свой отдых. Идеальная природа, красивые места, а главное много развлечений для туристов."/>
+                            <local:Person Name="Монако" Img="monako.jpg" Description="Страна чье второе название это роскошь. Где даже самый придирчивый турист найдет все."/>
+                            <local:Person Name="Германия" Img="germany.jpg" Description="Страна с самым красивым театром и оперой. Где родились множество мастеров искусства."/>
+                            <local:Person Name="Норвегия" Img="norvegiya.jpeg" Description="Если вы не любитель жаркого климата, а так же солнечных ванн, то Норвегия ваш выбор."/>
+                            <local:Person Name="Франция" Img="france.jpg" Description="Страна балета, замков и кинематографа. Страна которая изменила мир."/>
+                            <local:Person Name="Швейцария" Img="sweizaria.jpg" Description="Европейская страна с самым большим ВВП. Прекрасными видами и комфортабильными условиями." />
+                        </x:Array>
+                    </CollectionView.ItemsSource>
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <Frame HeightRequest="400" Margin="0, 20" HasShadow="True" BorderColor="#919191" Padding="0" CornerRadius="12">
+                                <VerticalStackLayout>
+                                    <Image Source="{Binding Img}" HeightRequest="250" WidthRequest="450" Margin="0"></Image>
+                                    <Label Margin="10" FontSize="20" TextTransform="Uppercase" HorizontalOptions="Center" TextColor="Black" Text="{Binding Name}"></Label>
+                                    <Label Margin="10" FontSize="15" HorizontalTextAlignment="Center" HorizontalOptions="Center" TextColor="Black" Text="{Binding Description}"></Label>
+                                </VerticalStackLayout>
+                            </Frame>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+            </VerticalStackLayout>
+        </ScrollView>
+    </Frame>
+
+
+</ContentPage>

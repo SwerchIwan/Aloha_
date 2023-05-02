@@ -1,0 +1,42 @@
+﻿^contentpage {
+    background-color: White;
+}
+
+stacklayout {
+    padding: 10;
+}
+
+    stacklayout label {
+        font-family: ubuntu;
+        margin: 5;
+    }
+
+#header {
+    font-size: 18;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.english {
+    font-weight: bold;
+    font-size: 60;
+    color: cadetblue;
+}
+
+.russian {
+    font-size: 12;
+}
+
+.buttonRegistr {
+    background-color: black;
+    color: white;
+    text-transform: uppercase;
+}
+
+.frameButton {
+    margin-top: 20;
+}
+
+.textBold {
+    font-weight: bold;
+}
